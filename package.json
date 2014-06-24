@@ -1,10 +1,9 @@
 {
   "name": "sfotipy-frontend",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
-  "scripts": {
-    "start": "gulp"
-  },
+  "author": "Rubén Moya Rodríguez @rubenmoya_",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.1",
