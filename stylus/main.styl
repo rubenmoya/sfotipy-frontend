@@ -1,0 +1,306 @@
+@import "nib"
+@import "fonts"
+@import "normalize"
+@import "colors"
+@import "animations"
+
+body
+	font-family 'Varela Round', sans-serif
+	font-size 16px
+
+a
+	text-decoration none
+
+img
+	vertical-align top
+
+figure
+	margin 0
+
+input
+	border 1px solid gris_claro
+	height 2em
+	padding 0 .5em 0 2em
+	border-radius .23em
+
+ul
+	margin 0
+	padding 0
+
+.border-bottom
+	border-bottom 1px solid gris_claro
+
+.center-block
+	margin 0 auto
+
+.pull-left
+	float: left
+
+.pull-right
+	float: right
+
+.center-text
+	text-align center
+
+.right-text
+	text-align right
+
+.padding
+	padding 1em
+
+.wrap
+	width 1000px
+
+.round
+	border-radius 50%
+	overflow hidden
+
+.progress
+	margin 1em 0
+	position relative
+	.min
+	.max
+		font-size .8em
+		position absolute
+		top -5px
+	.min
+		left 0
+	.max
+		right 0
+	.total
+		background gris_claro
+		border-radius 5px
+		height 5px
+		margin 0 auto
+		width 75%
+	.state
+		animation 200s state linear
+		background fucsia
+		border-radius 5px
+		height 5px
+		position relative
+		width 50%
+
+	.circle
+		background gris_oscuro
+		border-radius 50%
+		height 10px
+		position absolute
+		right 0
+		top -2px
+		width 10px
+
+.search-icon
+	position absolute
+	left .5em
+	top .5em
+	color gris_claro
+
+.close-icon
+	position absolute
+	top .4em
+	color gris_claro
+	right .5em
+	font-size 1em
+	font-style normal
+	cursor pointer
+
+.action 
+	color white
+	font-size 1.2em
+	margin-right .5em
+
+	&:last-child
+		margin 0
+
+	&.grey
+		color gris_claro
+
+.actions
+	background rgba(black, .3)
+	bottom 0
+	left 0
+	padding 1em
+	position absolute
+	right 0
+
+.relative
+	position relative
+
+.container
+	padding 1.4rem
+	font-size 0
+	text-align center
+
+.button-menu
+	color gris_oscuro
+	left .5em
+	margin-top -8px
+	position absolute
+	top 50%
+
+.header
+	height 3.5em
+	position relative
+	border-bottom 1px solid gris_claro
+
+	.title
+		font-size 1.1em
+		text-align center
+		margin 0
+		line-height 3.5em
+
+.menu
+	display none
+
+.song
+	display inline-block
+	font-size 1rem
+	margin-right 1em
+	margin-bottom 1em
+	width 8rem
+	text-align left
+	
+	&:nth-child(even)
+		margin-right 0
+
+
+	img
+		width 8rem
+		height 8rem
+
+p
+	margin .5em 0
+
+.name
+	color gris_oscuro
+
+.author
+	color gris_claro
+
+.playing
+	&.small
+		width 100%
+		margin 0 auto
+	.playlist
+		display none
+
+.image
+	img
+		width 100%
+		height auto
+
+.logo
+	background white
+	display none
+	overflow hidden
+	padding 1.3em 0
+
+	.image
+		img
+			width 7.6em
+
+.avatar
+	height 38px
+	width 38px
+
+.username
+	color gris_claro
+	margin-left .5em
+	position relative
+	top .5em
+	&:after
+		border-left 7px solid transparent
+		border-right 7px solid transparent
+		border-top 9px solid gris_claro
+		content ""
+		display inline-block
+		margin-left .4em
+.user
+	margin-left 3em
+	overflow hidden
+	width 15em
+
+.search
+	margin-top .2em
+
+.playlist
+	border-left 1px solid gris_claro
+	display none
+	padding 0 2em
+	width 22em
+
+	.list
+		.item
+			border-bottom 1px solid gris_claro
+			list-style none
+			padding 1em 0
+
+		.action
+			font-size 14px
+
+@media screen and (min-width:480px)
+	.song
+		&:nth-child(even)
+			margin-right 1em
+
+	.playing
+		&.medium
+			width auto
+	.image
+		img
+			width 100%
+			height auto
+
+@media screen and (min-width:1000px)
+	body
+		background gris_mas_claro
+
+	.button-menu
+		display:none
+
+	.menu
+		display block
+		overflow hidden
+		.item
+			float left
+			list-style none
+			a
+				border-top 5px solid transparent
+				color gris_oscuro
+				display block
+				padding 1em
+				text-transform uppercase
+				transition .5s border-top
+
+				&:hover
+					border-top 5px solid gris_oscuro
+
+				&.active
+					border-top 5px solid gris_oscuro
+
+	.header
+		border none
+		height auto
+
+		.title
+			display none
+
+	.logo
+		display block
+
+	.playing
+		&.large
+			margin 0 auto
+			overflow hidden
+			padding-top 2.3em
+			width 62em
+
+		.music
+			float left
+			width 31em
+			.description
+				display: none
+
+		.playlist
+			display block
