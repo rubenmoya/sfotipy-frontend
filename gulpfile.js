@@ -4,9 +4,10 @@ var connect = require('gulp-connect');
 var stylus = require('gulp-stylus');
 var nib = require('nib');
 
-gulp.task('webserver', function(){
+gulp.task('connect', function(){
 	connect.server({
-		livereaload: true
+		port: 3000,
+		livereload: true
 	});
 });
 
@@ -17,8 +18,8 @@ gulp.task('stylus', function(){
 		.pipe(connect.reload());
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', ['connect'], function(){
 	gulp.watch('./stylus/*.styl', ['stylus'])
 });
 
-gulp.task('default', ['webserver', 'watch']);
+gulp.task('default', ['connect', 'stylus', 'watch']);
